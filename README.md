@@ -51,3 +51,19 @@ This is a full-stack **Job Board application** built using the **MERN stack** fo
 
 ## 🛠️ Project Structure
 
+
+job-board-app/
+├── backend/
+│ ├── models/ # Mongoose Schema
+│ ├── routes/ # Express Routes
+│ ├── server.js # Express App Setup
+│ └── .env # Environment Variables
+├── frontend/
+│ ├── src/
+│ │ ├── components/ # React Components (JobForm, JobList, JobCard)
+│ │ ├── App.jsx
+│ │ └── main.jsx
+│ └── vite.config.js
+├── screenshots/ # Screenshot Images
+└── README.md
+
