@@ -48,10 +48,16 @@ This is a full-stack **Job Board application** built using the **MERN stack** fo
 
 
 ### 2. Add Job
-![Add Job](screenshots/add-job.png)
+<img width="1343" height="625" alt="image" src="https://github.com/user-attachments/assets/84ef1e2c-36fb-4533-9d07-6035b29f24ba" />
+
 
 ### 3. Edit Job
-![Edit Job](screenshots/edit-job.png)
+<img width="1291" height="622" alt="image" src="https://github.com/user-attachments/assets/8bbbe2b6-db0b-4715-918b-5bc34673c192" />
+
+
+### 4. Delete Job  & Toast notifications
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/dc75bd1f-476b-467c-a4fe-8eb378b92c4b" />
 
 ---
 
