@@ -13,10 +13,11 @@ const JobList = () => {
   const fetchJobs = async () => {
     try {
       setLoading(true);
-      const res = await axios.get('http://localhost:5000/api/jobs');
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/jobs`);
       setJobs(res.data);
     } catch (err) {
-      toast.error('Failed to fetch jobs');
+      toast.error(err.response?.data?.error || 'Failed to fetch jobs');
+      console.error('Fetch Jobs Error:', err.response || err);
     } finally {
       setLoading(false);
     }
@@ -29,27 +30,35 @@ const JobList = () => {
   const handleAddOrUpdate = async (jobData) => {
     try {
       if (editingJob) {
-        await axios.put(`http://localhost:5000/api/jobs/${editingJob._id}`, jobData);
+        await axios.put(
+          `${import.meta.env.VITE_API_URL}/api/jobs/${editingJob._id}`,
+          jobData
+        );
         toast.success('Job updated successfully!');
       } else {
-        await axios.post('http://localhost:5000/api/jobs', jobData);
+        await axios.post(
+          `${import.meta.env.VITE_API_URL}/api/jobs`,
+          jobData
+        );
         toast.success('Job added successfully!');
       }
       setEditingJob(null);
-      fetchJobs();
+      await fetchJobs();
     } catch (err) {
-      toast.error('Failed to save job');
+      toast.error(err.response?.data?.error || 'Failed to save job');
+      console.error('Save Job Error:', err.response || err);
     }
   };
 
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this job?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/jobs/${id}`);
-        toast.success('Job deleted!');
-        fetchJobs();
+        await axios.delete(`${import.meta.env.VITE_API_URL}/api/jobs/${id}`);
+        toast.success('Job deleted successfully!');
+        await fetchJobs();
       } catch (err) {
-        toast.error('Error deleting job');
+        toast.error(err.response?.data?.error || 'Failed to delete job');
+        console.error('Delete Job Error:', err.response || err);
       }
     }
   };
