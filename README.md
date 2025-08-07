@@ -44,7 +44,8 @@ This is a full-stack **Job Board application** built using the **MERN stack** fo
 ## 🖼️ Screenshots
 
 ### 1. Job Listings Page
-![Job List](screenshots/view-jobs.png)
+<img width="1338" height="629" alt="image" src="https://github.com/user-attachments/assets/8674ed25-d617-447e-b48c-cef2942803fd" />
+
 
 ### 2. Add Job
 ![Add Job](screenshots/add-job.png)
