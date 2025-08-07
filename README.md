@@ -52,18 +52,13 @@ This is a full-stack **Job Board application** built using the **MERN stack** fo
 ## 🛠️ Project Structure
 
 
-job-board-app/
-├── backend/
-│ ├── models/ # Mongoose Schema
-│ ├── routes/ # Express Routes
-│ ├── server.js # Express App Setup
-│ └── .env # Environment Variables
-├── frontend/
-│ ├── src/
-│ │ ├── components/ # React Components (JobForm, JobList, JobCard)
-│ │ ├── App.jsx
-│ │ └── main.jsx
-│ └── vite.config.js
-├── screenshots/ # Screenshot Images
-└── README.md
 
+---
+
+## 🧩 How to Run the App Locally
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/job-board-mern.git
+cd job-board-mern
