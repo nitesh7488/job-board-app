@@ -1,4 +1,4 @@
-/* Add these to your main CSS file */
+/* styles/main.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 body {
@@ -14,6 +14,11 @@ body {
 .light-mode {
   background-color: #f8f9fa;
   color: #212529;
+}
+
+.job-list-container {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.2) transparent;
 }
 
 .job-list-container::-webkit-scrollbar {
@@ -33,12 +38,20 @@ body {
   background-color: rgba(255,255,255,0.2);
 }
 
-/* Pulse animation for loading */
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.pulse {
-  animation: pulse 1.5s ease-in-out infinite;
+.btn {
+  transition: all 0.3s ease;
+}
+
+/* Animation for empty state */
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.empty-state-icon {
+  animation: pulse 2s infinite;
 }
